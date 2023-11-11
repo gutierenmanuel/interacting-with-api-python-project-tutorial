@@ -1,15 +1,18 @@
 import os
-from sqlalchemy import create_engine
 import pandas as pd
 from dotenv import load_dotenv
+
+import spotipy
+from spotipy.oauth2 import SpotifyClientCredentials
+
 
 # load the .env file variables
 load_dotenv()
 
-# 1) Connect to the database here using the SQLAlchemy's create_engine function
+client_id = os.environ.get("CLIENT_ID")
+client_secret = os.environ.get("SECRET_ID")
 
-# 2) Execute the SQL sentences to create your tables using the SQLAlchemy's execute function
+artist_uri = 'spotify:artist:1a2b3c4d5e6f7g2ye2Wgw4gimLv2eAKyk1NB?si=T3WOLkgZSiispl0oV5TO2Q'
 
-# 3) Execute the SQL sentences to insert your data using the SQLAlchemy's execute function
 
-# 4) Use pandas to print one of the tables as dataframes using read_sql function
+
